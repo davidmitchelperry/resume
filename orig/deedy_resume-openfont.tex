@@ -1,0 +1,304 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fontawesome}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{David M.}
+	    {Perry}
+	    {\href{mailto:david.perry880@gmail.com}{david.perry880@gmail.com}}
+	    {270.543.9208}
+	    {website.com}
+	    {\href{www.github.com}{\faGithub \  github.com}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Purdue University}
+\descript{M.S. in Computer Science}
+\location{Spring 2019 \\ West Lafayette, IN}
+\sectionsep
+
+
+\subsection{University of Kentucky}
+\descript{B.S. in Computer Science}
+\location{Spring 2013 \\ Lexington, KY}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Languages}
+C \textbullet{}   C++ \textbullet{} Python \textbullet{} Assembly \\
+Java \textbullet{} Ruby \textbullet{} PHP \textbullet{} R \textbullet{} Go \\
+\LaTeX \textbullet{} HTML \textbullet{} CSS \textbullet{} MySQL
+\sectionsep
+
+\subsection{Environments}
+Linux \textbullet{} Windows \textbullet{} Android \\ 
+OpenBSD
+\sectionsep
+
+\subsection{Libraries/Tools}
+LLVM \textbullet{} git \textbullet{} scikit-learn \\
+TensorFlow \textbullet{} Selenium \textbullet{} \\ 
+WinDbg \textbullet{} OllyDbg \textbullet{} IDA \\
+Microsoft Detours \textbullet{} Visual Studio
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+
+Software Engineering \\
+Operating Systems \\
+Security \\
+Automated Program Reasoning \\
+Parallel Computing \\
+Networking \\
+Compilers \\
+Algorithms \\
+Modeling and Simulation
+\sectionsep
+
+\subsection{Undergraduate}
+Software Engineering \\
+Operating Systems \\
+Security \\
+Networks \\
+Programming Languages \\
+Algorithms \\
+Theory of Computing \\
+Artificial Intelligence\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Purdue University}
+\descript{| Research Assistant }
+\location{2014 – 2019 | West Lafayette, IN}
+\vspace{.05in} % Hacky fix for awkward extra vertical space
+Worked with advisors, \href{https://www.cs.purdue.edu/homes/xyzhang/}{Xiangyu Zhang} and 
+\href{https://www.cs.purdue.edu/homes/roopsha/}{Roopsha Samanta}, researching topics in
+the field of software engineering, programming languages, and program verification. 
+Additionally, assisted other research group members on projects involving Android 
+security, automated debugging, and fuzzing.
+\vspace{.15in} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item {\fontspec[Path = fonts/lato/]{Lato-Bol}\selectfont\bfseries Symbolic Execution Optimizations}
+	\vspace{.05in} % Hacky fix for awkward extra vertical space
+	\begin{tightemize}
+		\item[$-$] Found optimizations that drastically reduce the time required to symbollically execute
+		   programs that are control dependent on large arrays
+	   	\item[$-$]Implemented optimization in the popular symbolic execution engine KLEE 
+			\url{https://srg.doc.ic.ac.uk/projects/klee-array/}
+		\item[$-$] Published at ISSTA 2017
+	\end{tightemize}
+	\vspace{.05in} % Hacky fix for awkward extra vertical space
+\item {\fontspec[Path = fonts/lato/]{Lato-Bol}\selectfont\bfseries Program Clustering}
+	\begin{tightemize}
+		\vspace{.05in} % Hacky fix for awkward extra vertical space
+		\item[$-$] Implemented a tool, SemCluster, that leverages machine learning and
+			   program semantics to classify programs based on their bugs and
+			   implementation strategies
+		\item[$-$] Published at PLDI 2019
+	\end{tightemize}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{MIT Lincoln Laboratory}
+\descript{| Summer Intern }
+\location{Summer 2014, 2015 | Lexington, MA}
+\vspace{.05in} % Hacky fix for awkward extra vertical space
+Worked with advisor \href{https://www.ll.mit.edu/biographies/hamed-okhravi}{Hamed Okhravi}
+in the Cyber Analytics and Decision systems group
+researching techniques for defending against information leaks and memory disclosures.
+Developed a tool, TRACER, that protects Commercial off the Shelf executables without
+source by encrypting their import address table.
+\sectionsep
+
+\runsubsection{Purdue University}
+\descript{| Teaching Assistant}
+\location{2014 – 2018 | West Lafayette, IN}
+\begin{tightemize}
+	\item Intro. to C Programming (Fall 2018) 
+	\item Graduate Software Engineering (Fall 2017)
+	\item Software Testing (Spring 2017)
+	\item Networking (Spring 2014)
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Sandia National Laboratory}
+\descript{| Cyber Defenders Intern}
+\location{Summer 2012 | West Lafayette, IN}
+\begin{tightemize}
+	\item Extended an intrusion detection system to support malware detection
+	\item Implemented genetic programming algorithms in Go
+	\item Developed a program to check the status of individual nodes of a super computer cluster
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+
+{\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{10pt}{12pt}\selectfont\bfseries \underline{Perry, D.} M., Kim, D., Samanta, R., \& Zhang, X. (2019, June). 
+SemCluster: Clustering of Imperative Programming
+Assignments Based on Quantitative Semantic Features. In Proceedings of the 40th ACM SIGPLAN Conference on Programming
+Language Design and Implementation (PLDI ’19). ACM.}
+
+\vspace{.05in}
+
+You, W., Liu, X., Ma, S., \underline{Perry, D.}, Zhang, X., \& Liang, B. (2019,
+May). SLF: Fuzzing without Valid Seed Inputs. In
+Proceedings of the 41st International Conference on Software Engineering (ICSE '19). ACM.
+
+\vspace{.05in}
+
+{\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{10pt}{12pt}\selectfont\bfseries \underline{Perry, D. M.}, Mattavelli, A., Zhang, X., \& Cadar, C. (2017, July). Accelerating array constraints in symbolic execution. In Proceedings of the 26th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA `17). ACM. }
+\vspace{.05in}
+
+Huang, J., Aafer, Y., \underline{Perry, D.}, Zhang, X., \& Tian, C. (2017, October). UI driven Android application reduction. In Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE '17). IEEE Press.
+
+\vspace{.05in}
+{\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{10pt}{12pt}\selectfont\bfseries Kim, D., Kwon, Y., Liu, P., Kim, I. L., \underline{Perry, D. M.}, Zhang, X., \& Rodriguez-Rivera, G. (2016). Apex: Automatic Programming Assignment Error Explanation (OOPSLA’16). ACM.}
+
+%\runsubsection{Cornell Robot Learning Lab}
+%\descript{| Head Undergrad Research}
+%\location{Jan 2014 – Present | Ithaca, NY}
+%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.  Publication submitted.
+%\sectionsep
+%
+%\runsubsection{Cornell Phonetics Lab}
+%\descript{| Head Undergraduate Researcher}
+%\location{Mar 2012 – May 2013 | Ithaca, NY}
+%Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Awards} 
+%\begin{tabular}{rll}
+%2014	     & top 52/2500  & KPCB Engineering Fellow\\
+%2014	     & 2\textsuperscript{nd} most points  & Google Code Jam, Qualification Round\\
+%2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+%2013	     & National  & Jump Trading Challenge Finalist\\
+%2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+%2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+%2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+%2010     & National & Comp. Soc. of India's National Programming Contest\\
+%\end{tabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Societies} 
+%
+%\begin{tabular}{rll}
+%2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor Society\\
+%2014   & National   & The Global Leadership and Education Forum (tGELF)\\
+%2012   &  National  & Golden Key International Honor Society\\
+%2012   &  National   & National Society of Collegiate Scholars\\
+%\end{tabular}
+%\sectionsep
+
+\end{minipage} 
+\end{document}
